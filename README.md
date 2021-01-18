@@ -1,3 +1,3 @@
 # cdn
 
-jsDeliver Cdn
+jsDelivr CDN
