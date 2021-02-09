@@ -155,7 +155,7 @@ def doReport(person):
     url = urlheader+"/com.sudytech.work.shgcd.jkxxcj.jkxxcj.saveOrUpdate.biz.ext"
     finalRes = sess.post(url,json=updateData)
     if finalRes.json()['result']["success"]:
-        log("------------------")
+        log("Report SUCCESS")
         return True, None
     else:
         return False, "[" + finalRes.json()['result']['errorcode'] + "]" + finalRes.json()['result']['msg']
