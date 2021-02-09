@@ -13,8 +13,6 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 
 class Test():
-    self.vars = {}
-
     def wait_for_window(self, timeout=2):
         time.sleep(round(timeout / 1000))
         wh_now = self.driver.window_handles
@@ -48,6 +46,7 @@ if __name__ == '__main__':
     test.driver.find_element(By.ID, "username").send_keys(person["name"])
     test.driver.find_element(By.ID, "password").send_keys(person["pwd"])
     test.driver.find_element(By.ID, "passbutton").click()
+    test.vars = {}
     test.vars["window_handles"] = test.driver.window_handles
     test.driver.find_element(
         By.CSS_SELECTOR, "#group-4 > .layui-col-xs12:nth-child(2) p:nth-child(1)").click()
