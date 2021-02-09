@@ -32,15 +32,15 @@ if __name__ == '__main__':
         "pwd": sys.argv[2],  # 其实这里你可以填你自己的, 但别上传git
     }
     test = Test()
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument('--headless')
-    chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument('--disable-gpu')
-    chrome_options.add_argument('--disable-dev-shm-usage')
+    options = webdriver.Options()
+    options.add_argument('--headless')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-gpu')
+    options.add_argument('--disable-dev-shm-usage')
     chromedriver = "/usr/bin/chromedriver"
     os.environ["webdriver.chrome.driver"] = chromedriver
     test.driver = webdriver.Chrome(
-        chrome_options=chrome_options, executable_path=chromedriver)
+        options=options, executable_path=chromedriver)
     # test.driver = webdriver.Chrome()
     test.driver.get("https://web-vpn.sues.edu.cn/")
     test.driver.find_element(By.ID, "username").send_keys(person["name"])
