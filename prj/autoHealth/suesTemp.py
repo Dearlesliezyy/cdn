@@ -28,8 +28,8 @@ def log(s: str):
 
 if __name__ == '__main__':
     person = {
-        "CASUsername": sys.argv[1],  # 其实这里你可以填你自己的, 但别上传git
-        "CASPassword": sys.argv[2],  # 其实这里你可以填你自己的, 但别上传git
+        "name": sys.argv[1],  # 其实这里你可以填你自己的, 但别上传git
+        "pwd": sys.argv[2],  # 其实这里你可以填你自己的, 但别上传git
     }
     test = Test()
     chrome_options = webdriver.ChromeOptions()
