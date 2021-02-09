@@ -59,4 +59,5 @@ if __name__ == '__main__':
     test.driver.find_element(
         By.CSS_SELECTOR, ".input-group > .form-control").send_keys(temp)
     test.driver.find_element(By.ID, "post").click()
+    test.driver.find_element(By.LINK_TEXT, "确定").click()
     log("Report Success! "+temp)
