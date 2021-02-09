@@ -13,6 +13,8 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 
 class Test():
+    self.vars = {}
+
     def wait_for_window(self, timeout=2):
         time.sleep(round(timeout / 1000))
         wh_now = self.driver.window_handles
