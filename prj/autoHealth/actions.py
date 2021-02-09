@@ -163,8 +163,8 @@ def doReport(person):
 
 if __name__ == '__main__':
     person = {
-        "CASUsername": sys.argv[1],
-        "CASPassword": sys.argv[2],
+        "name": sys.argv[1],
+        "pwd": sys.argv[2],
     }
     requests.adapters.DEFAULT_RETRIES = 15
     
