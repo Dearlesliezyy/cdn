@@ -32,7 +32,7 @@ if __name__ == '__main__':
         "pwd": sys.argv[2],  # 其实这里你可以填你自己的, 但别上传git
     }
     test = Test()
-    options = webdriver.Options()
+    options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-gpu')
